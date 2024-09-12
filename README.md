@@ -1,7 +1,7 @@
 # Ecommerce-website
 
 
-# Steps
+# `Steps:`
 1. Go to the projects directory in your local system and then RUN the command ls in your `git bash` terminal it will show you all the files in that directory.
 2. Run the command `cd Document` to safe all the files in that folder.
 3. Run the command `ls` to show the all the lists of the files.
@@ -26,7 +26,7 @@
 Creating a basic eCommerce website using `HTML, CSS, and JavaScript` involves multiple components such as `navigation, product display, shopping cart, and checkout functionality`.
 Below is a simple structure for an eCommerce website with product `listings, a cart feature, and basic styling`.
 
-# `Steps`
+# `Steps:`
 1. Import the "Lato" font.
 2. Create a navigation bar with a logo, search bar, and "Limited offer!" banner.
 3. Display a logo using an image tag.
@@ -76,7 +76,7 @@ Below is a simple structure for an eCommerce website with product `listings, a c
 Now we can use the `style.css` file for styling and desighing in the website.
 
 
-# 1. Apply the `"Lato"` font and reset padding and margins in the body.
+1. Apply the `"Lato"` font and reset padding and margins in the body.
 ```py
 body{
     font-family: 'Lato' , sans-serif;
@@ -84,7 +84,7 @@ body{
     margin:0;
 }
 ```
-# 2. Style the `nav element` with a dark background, white text, and padding.
+2. Style the `nav element` with a dark background, white text, and padding.
 ```py
 nav{
     background-color: #111;
@@ -92,7 +92,7 @@ nav{
     padding: 20px 50px;
 }
 ```
-# 3. Use `flexbox in .navTop`to align and space items evenly.
+3. Use `flexbox in .navTop`to align and space items evenly.
 ```py
 .navTop{
     display: flex;
@@ -100,7 +100,7 @@ nav{
     justify-content: space-between;
 }
 ```
-# 4. Style the `search bar` with a `gray background, padding, and rounded corners`. Ensure the input field has `no border and a light gray` placeholder.
+4. Style the `search bar` with a `gray background, padding, and rounded corners`. Ensure the input field has `no border and a light gray` placeholder.
 ```py
 .search{
     display: flex;
@@ -120,7 +120,7 @@ nav{
     color: lightgray;
 }
 ```
-# 5. Style the `.limitedoffer` text with a green underline and make it clickable.
+5. Style the `.limitedoffer` text with a green underline and make it clickable.
 ```py
 .limitedoffer{
     font-size: 20px;
@@ -128,7 +128,7 @@ nav{
     cursor: pointer;
 }
 ```
-# 6. Align `menu items horizontally in .navBottom` using flexbox; add spacing and styling to each item with `.menuItems`.
+6. Align `menu items horizontally in .navBottom` using flexbox; add spacing and styling to each item with `.menuItems`.
 ```py
 .navBottom{
     display: flex;
