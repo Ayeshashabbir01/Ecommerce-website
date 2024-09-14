@@ -201,6 +201,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 
 1. Adds space on the right, makes the cursor a pointer, and sets the text color to light gray.
 ```py
+# Ecommerce/style.css
 .menuItems{
     margin-right: 50px;
     cursor : pointer;
@@ -210,6 +211,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 ```
 2. Sets a background image and gives the slider a cool angled bottom shape.
 ```py
+# Ecommerce/style.css
 .slider {
     background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -219,6 +221,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 3. Arranges items in a row and makes it wide enough to hold all the slides, with a smooth sliding effect.
 
 ```py
+# Ecommerce/style.css
 .sliderwraper{
     display: flex;
     width: 500vw;
@@ -229,6 +232,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 4. Makes each slide as wide as the screen, centers everything, and sets up layering for elements.
 
 ```py
+# Ecommerce/style.css
 .sliderItem{
     width: 100vw;
     display: flex;
@@ -240,6 +244,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 5.  Creates a big circle in the background behind the content.
 
 ```py
+# Ecommerce/style.css
 .sliderBg{
     width: 750px;
     height: 750px;
@@ -250,6 +255,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 6. Ensures the product image appears on top of the background.
 
 ```py
+# Ecommerce/style.css
 .sliderimg{
     z-index: 1;
 }
@@ -257,6 +263,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 7. Positions the title in the top-right corner, makes it big, bold, and white.
 
 ```py
+# Ecommerce/style.css
 .sliderTitle{
     position: absolute;
     top: 10%;
@@ -271,6 +278,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 8.  Puts the price in the top-left, makes it big, lighter, with a border, and different colors for each item.
 
 ```py
+# Ecommerce/style.css
 .sliderPrice{
     position: absolute;
     top: 10%;
@@ -286,6 +294,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 9. Places the "BUY NOW!" button in the middle-right, makes it bold, with a black background and white text.
 
 ```py
+# Ecommerce/style.css
 .buyButton{
     position: absolute;
     top: 50%;
@@ -302,6 +311,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 10. Changes the button to white with black text when you hover over it.
 
 ```py
+# Ecommerce/style.css
 .buyButton:hover{
     background-color: white;
     color: black;
@@ -310,6 +320,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 11.  Gives each slider a different background and text color for the price.
 
 ```py
+# Ecommerce/style.css
 .sliderItem:nth-child(1) .sliderBg{
     background-color:#369e62;
 }
@@ -333,6 +344,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
 12. Gives each slider a different  text color for the price.
 
 ```py
+ # Ecommerce/style.css
 .sliderItem:nth-child(1) .sliderPrice{
     color:#369e62;
 }
