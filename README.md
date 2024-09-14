@@ -353,7 +353,7 @@ Then in the `style.css` file we can styling the `sliderItems`.
     color:cornsilk;
 }
 ```
-# `app.js`
+ `app.js`
 
  App.js is the file where the` main logic` of the application starts and is configured, whether it's for the `frontend or the backend`.
 
@@ -375,7 +375,7 @@ menuItems.forEach((item, index) => {
     });
 });
 ```
-# `Steps:`
+ `Steps:`
 1. Selects the element that slides.
 2. Finds all the clickable menu items.
 3. Goes through each menu item one by one.
