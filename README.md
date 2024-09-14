@@ -365,6 +365,22 @@ Firstly we can `load the javascript file` in the `nav` of the `index.html` file.
 <script src="./app.js"></script>
 .....
 ```
+```js
+const wraper = document.querySelector(".sliderwraper");
+const menuItems = document.querySelectorAll(".menuItems");
+
+menuItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        wraper.style.transform = `translateX(${-100 * index}vw)`;
+    });
+});
+```
+# `Steps:`
+1. Selects the element that slides.
+2. Finds all the clickable menu items.
+3. Goes through each menu item one by one.
+4. Adds a click action to each menu item.
+5. Moves the sliding element based on which menu item is clicked.
 
 
 
