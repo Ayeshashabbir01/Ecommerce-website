@@ -394,6 +394,234 @@ menuItems.forEach((item, index) => {
 4. Adds a click action to each menu item.
 5. Moves the sliding element based on which menu item is clicked.
 
+# `Features`
+
+Features are the main things a business offers, like free delivery or easy returns. They show what customers get.
+
+ Firstly we creates a section to display service features like `free shipping`, `returns`, `gift cards`, and `contact options`. Each feature includes an `image, a title, and a short description`.
+
+ ```py
+ <div class="features">
+            <div class="feature">
+                <img src="./img/shipping.png" alt="" class="featureIcon">
+                <span class="featureTitle">FREE SHIPPING</span>
+                <span class="featureDesc">free worldwide shipping on all orders.</span>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <img src="./img/return.png" alt="" class="featureIcon">
+                    <span class="featureTitle">30 DAYS RETURN</span>
+                    <span class="featureDesc">no question return and easy refund in 14 days.</span>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <img src="./img/gift.png" alt="" class="featureIcon">
+                        <span class="featureTitle">GIFT CARDS</span>
+                        <span class="featureDesc">buy gift cards and use coupon codes easily.</span>
+                    </div>
+                    <div class="feature">
+                        <img src="./img/contact.png" alt="" class="featureIcon">
+                        <span class="featureTitle">CONTACT US!</span>
+                        <span class="featureDesc">keep in touch via email and support system.</span>
+                    </div>
+```
+Now we can add styling in the `style.css` file .
+
+1. The `.features` class arranges items in a row, spaces them out evenly, and adds 50px padding around them.
+
+```py
+# Ecommerce/style.css
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+```
+The `.feature` class makes each item stack vertically and centers the content.
+
+```py
+# Ecommerce/style.css
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+```
+The `.featureIcon` class sets the icon size to 50x50 pixels.
+
+```py
+# Ecommerce/style.css
+.featureIcon{
+    width: 50px;
+    height: 50px;
+
+}
+```
+The `.featureTitle` class makes the title text bigger, bold, and adds some space around it.
+
+```py
+# Ecommerce/style.css
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+```
+
+The `.featureDesc` class colors the description gray, limits the width to half, and sets its height to 100px.
+
+```py
+# Ecommerce/style.css
+.featureDesc{
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+```
+# `Product Section design:`
+
+In the product section design ,we can desigh the products . 
+
+Firstly we can creates a `product section`. It shows an image of the product, its name `AIR FORCE` and the price of `$199`. There’s a `description` of the product, `color options` represented by small colored `boxes`, and `size choices` listed as numbers. At the bottom, there's a `BUY NOW!` button for purchasing the product.
+
+```py
+# Ecommerce/index.html
+<div class="product">
+        <img src="./img/air.png" alt="Air Force Shoes" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR FORCE</h1>
+            <h2 class="productPrice">$199</h2>
+            <p class="productDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugit quis reprehenderit illum cupiditate magnam voluptatem. Nesciunt autem doloribus rerum! Soluta iste possimus quasi quaerat corrupti culpa fugiat repellendus fugit.</p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+                       <button class="productButton">BUY NOW!</button>
+            </div>
+        </div>
+```
+Now we can add some styling in the `style.css` file.
+
+1. Takes up the whole screen height with a light gray background and a special shape.
+
+```py
+# Ecommerce/style.css
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+```
+
+2. Takes up half the width of the container.
+
+```py
+# Ecommerce/style.css
+  .productImg{
+    width: 50%;
+  }
+```
+3. Positioned on the top-right with padding and takes up 40% of the container width.
+
+```py
+# Ecommerce/style.css
+  .productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+```
+4. Very large and bold text for the product name.
+
+```py
+# Ecommerce/style.css
+  .productTitle{
+    font-size: 75px;
+    font-weight: 900;
+  }
+```
+5. Gray text for the product description (fix font-style to font-size).
+
+```py
+# Ecommerce/style.css
+  .productDesc{
+    font-style: 24px;
+    color: gray;
+  }
+```
+6. Boxes with size numbers displayed in a row.
+
+```py
+# Ecommerce/style.css
+  .colors,.sizes{
+    display: flex;
+    margin-bottom: 20px;
+  }
+```
+7.  Small colored squares displayed in a row for different color options.
+
+```py
+# Ecommerce/style.css
+  .color{
+    width: 32px;
+    height: 32px;
+    border-radius:5px ;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+```
+
+```py
+# Ecommerce/style.css
+  .color:last-child{
+    background-color: darkblue;
+
+}
+```
+8. Boxes with size numbers displayed in a row.
+```py
+# Ecommerce/style.css
+.size{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+```
+9. Black button with white text, aligned to the right, which changes to a white background with black text when you hover over it.
+
+```py
+# Ecommerce/style.css
+.productButton{
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+```
+```py
+# Ecommerce/style.css
+.productButton:hover{
+    background-color: white;
+    color:black;
+}
+```
+
 
 
 
