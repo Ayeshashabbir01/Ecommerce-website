@@ -621,7 +621,148 @@ Now we can add some styling in the `style.css` file.
     color:black;
 }
 ```
+# `DOM (Document Object Model)  Manipulation in Javascript`
 
+DOM manipulation in JavaScript means using JavaScript to change the content and appearance of a web page.
+
+Firstly we can craete the `JavaScript array of objects`, each representing a `product`. Each object contains details about the product, including its `ID`, `title`, `price`, and available `colors`.
+
+```py
+# Ecommerce/apps.js
+ {
+      id: 1,
+      title: "Air Force",
+      price: 119,
+      colors: [
+        {
+          code: "black",
+          img: "./img/air.png",
+        },
+        {
+          code: "darkblue",
+          img: "./img/air2.png",
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "Air Jordan",
+      price: 149,
+      colors: [
+        {
+          code: "lightgray",
+          img: "./img/jordan.png",
+        },
+        {
+          code: "green",
+          img: "./img/jordan2.png",
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Blazer",
+      price: 109,
+      colors: [
+        {
+          code: "lightgray",
+          img: "./img/blazer.png",
+        },
+        {
+          code: "green",
+          img: "./img/blazer2.png",
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: "Crater",
+      price: 129,
+      colors: [
+        {
+          code: "black",
+          img: "./img/crater.png",
+        },
+        {
+          code: "lightgray",
+          img: "./img/crater2.png",
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: "Hippie",
+      price: 99,
+      colors: [
+        {
+          code: "gray",
+          img: "./img/hippie.png",
+        },
+        {
+          code: "black",
+          img: "./img/hippie2.png",
+        },
+      ],
+    },
+
+```
+Now we can select `parts of the webpage `to show a product. It picks the `first product`, then gets the `image`, `title`, and `price` from the page. It also grabs all the `color and size` options. These elements can be used to update the product details.
+
+```js
+# Ecommerce/app.js
+.....
+ let choosenProduct = products[0];
+
+const currentProductImg = document.querySelector(".productImg");
+const currentProductTitle = document.querySelector(".productTitle");
+const currentProductPrice = document.querySelector(".productPrice");
+const currentProductColors = document.querySelectorAll(".color");
+const currentProductSizes = document.querySelectorAll(".size");
+.....
+
+```
+Now we can updates the product details on the page when a new product is chosen. It sets the `choosenProduct` to the selected one, then changes the title, price, and image to match the new product.
+
+```js
+....
+ //change the choosen product
+    choosenProduct = products[index];
+
+
+    //change texts of currentProduct
+    currentProductTitle.textContent = choosenProduct.title;
+    currentProductPrice.textContent = "$" + choosenProduct.price;
+    currentProductImg.src = choosenProduct.colors[0].img
+```
+
+we can give different  product colors of each products and updates the product image when a color is clicked and highlights the selected size with a black background and white text.
+
+```js
+
+      //assing new colors
+      currentProductColors.forEach((color, index) => {
+        color.style.backgroundColor = choosenProduct.colors[index].code;
+      });
+    });
+  });
+  
+  currentProductColors.forEach((color, index) => {
+    color.addEventListener("click", () => {
+      currentProductImg.src = choosenProduct.colors[index].img;
+    });
+  });
+  
+currentProductSizes.forEach((size, index) => {
+  size.addEventListener("click", () => {
+    currentProductSizes.forEach((size) => {
+      size.style.backgroundColor = "white";
+      size.style.color = "black";
+    });
+    size.style.backgroundColor = "black";
+    size.style.color = "white";
+  });
+});
+```
 
 
 
