@@ -184,7 +184,7 @@ nav{
     right: 0;
     margin: auto;
     padding: 10px 50px;
-    display: flex;
+    display: none;
     flex-direction: column;
     -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
@@ -206,7 +206,59 @@ label{
     padding: 10px;
     margin: 10px 0px;
     border: none;
+    border-bottom: 1px solid gray;
 }
+
+.payInput::placeholder{
+    color: rgb(145, 143, 143);
+}
+
+.cardIcons{
+    display: flex;
+}
+
+.cardIcon{
+    margin-right: 10px;
+
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.sm{
+    width: 30%;
+}
+
+.payButton{
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close{
+    width: 20px;
+    height: 20px;position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+
+}
+
 
 .productImg{
     width: 50%;
@@ -269,3 +321,18 @@ label{
     background-color: white;
     color:black;
 }
+
+.gallery{
+    padding: 50px;
+    display: flex;
+}
+
+.galleryItem{
+    flex: 1;
+    padding: 50px;
+}
+
+.galleryImg{
+    width: 100%;
+}
+

@@ -763,6 +763,57 @@ currentProductSizes.forEach((size, index) => {
   });
 });
 ```
+# `Create Model Using HTML,CSS,JavaScripts:`
+
+To create a modal, use HTML for the structure, CSS for styling, and JavaScript for functionality. Add a button to open the modal, style it with CSS, and use JavaScript to show the modal on button click and hide it when the close button or overlay is clicked.
+
+firstly we shows a `payment form` where users fill in their `name`, `phone number`, and `address`, along with `card details` featuring `Visa` and `MasterCard` icons. There's a `Checkout` button to finish the payment and a `close button` to exit the form.
+
+ Below the form, a `gallery `displays three images with motivational titles. The layout helps users easily enter their information and view the images.
+
+ ```py
+ # ecommerce/index.html
+            .......
+            <div class="payment">
+                <h1 class="payTitle">Personal Informations</h1>
+                <label>Name and Surname</label>
+                <input type="text" placeholder="John Doe" class="payInput">
+                <label>Phone number</label>
+                <input type="text" placeholder="+92 6789542" class="payInput">
+                <label>Address</label>
+                <input type="text" placeholder="Model Town (z-block) 2 str" class="payInput">
+                <h1 class="payTitle">Card Informations</h1>
+                <div class="cardIcons">
+                    <img src="./img/visa.png" alt="Visa" width="40">
+                    <img src="./img/master.png" alt="MasterCard" width="40">
+                </div>
+                <input type="password" class="payInput" placeholder="Card Number">
+                <div class="cardInfo">
+                    <input type="text" placeholder="mm" class="payInput" maxlength="2">
+                    <input type="text" placeholder="yyyy" class="payInput" maxlength="4">
+                    <input type="text" placeholder="cvv" class="payInput" maxlength="3">
+                </div>
+                <button class="payButton">Checkout</button>
+                <span class="close">X</span>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Be Yourself!</h1>
+            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">This is the First Day of Your New Life</h1>
+            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Just Do it!</h1>
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">    
+        </div>
+    </div>  
+    
+```
 
 
 
