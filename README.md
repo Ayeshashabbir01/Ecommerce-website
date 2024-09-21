@@ -812,9 +812,123 @@ firstly we shows a `payment form` where users fill in their `name`, `phone numbe
             <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">    
         </div>
     </div>  
-    
+```
+now we can add some styling in the styling.css file .
+
+1. `.payment` Defines a hidden, centered modal with fixed dimensions, padding, and a shadow effect.
+
+```py
+.payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+
+}
 ```
 
+2. `.payTitle` Styles the payment form title with a 20px font size and gray color.
+
+```py
+.payTitle{
+    font-size: 20px;
+    color: rgb(83, 80, 80);
+}
+```
+3. `label` Sets the font size to 14px and a light weight for form labels.
+
+```py
+label{
+    font-size: 14px;
+    font-weight: 300;
+}
+```
+4. `.payInput` Styles the input fields with padding, margin, and a bottom border.
+
+```py
+.payInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder{
+    color: rgb(145, 143, 143);
+}
+```
+
+5. `.cardIcons` Aligns payment method icons horizontally with flexbox.
+   `.cardIcon` Adds right margin to space out individual payment icons.
+   `.cardInfo` Aligns card number, expiration date, and CVV fields with space between them.
+
+```py
+.cardIcons{
+    display: flex;
+}
+
+.cardIcon{
+    margin-right: 10px;
+
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+```
+
+6. Sets the width of small input fields.
+```py
+.sm{
+    width: 30%;
+}
+```
+
+7. `.payButton` Positions the submit button at the bottom of the modal with a green background and shadow.
+
+```py
+.payButton{
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+```
+8. `.close` Styles the close button at the top-right of the modal, with a gray background and white text.
+
+```py
+.close{
+    width: 20px;
+    height: 20px;position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+
+}
+```
 
 
 
