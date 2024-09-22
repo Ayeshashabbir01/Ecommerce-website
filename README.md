@@ -1212,6 +1212,189 @@ footer{
     color: rgb(71, 70, 70);
 }
 ```
+# ` Responsive Design with Media Query`
+
+Responsive design with `media queries` adapts a `website's layout` for different screen sizes, making it look good on `phones`, `tablets`, and desktops by applying specific styles based on device width or features.
+
+Now we can use media query for mobile screen.
+
+1. Media query adjusts the website layout for  mobile screens with a max-width of 480px.
+
+Adds 20px padding for better spacing.
+
+```py
+#style.css
+@media screen and (max-width:480px) {
+
+ nav{
+    padding: 20px;
+}
+```
+2. Hides the search bar by setting `display: none`.
+```py
+.search{
+    display: none;
+}
+```
+3. Allows navigation items to wrap onto the next line.
+
+```py
+.navBottom{
+    flex-wrap: wrap;
+}
+```
+4.  Increases margin to 20px, sets font size to 20px, and makes font bold for visibility.
+
+```py
+.menuItem{
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+```
+5. Removes any clipping effects with `clip-path: none`.
+
+.slider{
+    clip-path: none;
+}
+6. Adjusts image width to 90% to fit within smaller screens.
+
+```py
+.sliderimg{
+    width: 90%;
+}
+```
+7. Expands background to full width and height (100%).
+
+```py
+.sliderBg{
+    width: 100%;
+    height: 100%;
+}
+```
+8.  Hides the slider title with display: none.
+
+```py
+.sliderTitle{
+    display: none;
+}
+```
+9.  Moves the price to the bottom left, with a light gray background.
+
+```py
+.sliderPrice{
+    top: unset;
+    bottom: 0;
+    left: 0;
+    background-color: lightgray;
+}
+```
+10.  Moves the buy button to the top-right corner.
+
+```py
+.buyButton{
+    right: 0;
+    top: 0;
+}
+```
+11. Changes layout to column for easier vertical scrolling.
+
+```py
+.features{
+    flex-direction: column;
+}
+```
+12. Removes clipping and aligns product content centrally in a column layout.
+
+```py
+.product{
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+```
+13. Reduces product image width to 80%.
+
+```py
+.productImg{
+    width: 80%;
+}
+```
+14. Makes product details center-aligned, stacking content in a column.
+
+```py
+.productDetails{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+```
+15. Enlarges the product title font to 50px for better readability.
+
+```py
+.productTitle{
+    font-size: 50px;
+    margin: 0;
+}
+```
+16. Hides the gallery section.
+
+```py
+.gallery{
+    display: none;
+}
+```
+17. Changes layout to column format for the new season section.
+
+```py
+.newSeason{
+    flex-direction: column;
+}
+```
+18. Adds 50px padding to the second item in the new season section.
+
+```py
+.nsItem:nth-child(2){
+    padding: 50px;
+}
+```
+19. Changes footer layout to column and centers content.
+
+```py
+footer{
+    flex-direction: column;
+    align-items: center;
+}
+```
+20. Adds 20px padding, adjusts width to 90%, and centers content. `.footerRight` has a light background color.
+```py
+.footerLeft{
+    padding: 20px;
+    width: 90%;
+}
+.footerRight{
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+}
+```
+
+21. Adjusts payment form width to 90% and adds 20px padding for smaller screens.
+
+```py
+.payment{
+    width: 90%;
+    padding: 20px;
+}
+}
+```
 
 
 
