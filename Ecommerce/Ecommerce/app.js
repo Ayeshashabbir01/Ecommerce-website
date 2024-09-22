@@ -122,7 +122,6 @@ currentProductSizes.forEach((size, index) => {
     size.style.color = "white";
   });
 });
-  
 
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");

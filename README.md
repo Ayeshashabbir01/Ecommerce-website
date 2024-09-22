@@ -944,6 +944,120 @@ close.addEventListener("click",()=>{
   payment.style.display="none"
 })
 ```
+# `Gallery Design:`
+
+A gallery design displays images in a grid, making it easy to view and click on pictures.
+
+we can creates a gallery with three items (title and image) and a new season section with two images, text, and a button for a new collection.
+
+```py
+<div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Be Yourself!</h1>
+            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">This is the First Day of Your New Life</h1>
+            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Just Do it!</h1>
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="galleryImg">    
+        </div>
+    </div>
+    
+    <div class="newSeason">
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImg">
+        </div>
+        <div class="nsItem">
+            <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
+            <h1 class="nsTitle">New Season</h1>
+            <h1 class="nsTitle">New Collection</h1>
+            <a href="#nav">
+                <button class="nsButton">CHOOSE YOUR STYLE</button>
+            </a>
+        </div>
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImg">
+        </div>
+    </div>
+```
+Now we can add some styling in the styling.css.
+
+1. Adds 50px padding and uses flexbox to arrange items in a row.
+
+```py
+.gallery{
+    padding: 50px;
+    display: flex;
+}
+```
+2. Takes equal space in the gallery and has 50px padding.
+
+```py
+.galleryItem{
+    flex: 1;
+    padding: 50px;
+}
+```
+3. Sets images to fill the full width of their parent item.
+
+```py
+.galleryImg{
+    width: 100%;
+}
+```
+4. Uses flexbox to arrange child items in a row.
+
+```py
+.newSeason{
+
+    display: flex;
+
+}
+```
+5. Takes equal space, has a black background, white text, and uses flexbox with vertical alignment.
+
+```py
+.nsItem {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Change this from column to row */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+```
+6. Sets images to 100% width and a fixed height of 500px.
+
+```py
+.nsImg{
+    width: 100%;
+    height: 500px;
+}
+.nsTitle{
+    font-size: 40px;
+}
+```
+7. Adds padding, makes the text bold, and changes the cursor to a pointer when hovered.
+
+```py
+.nsButton{
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+```
+
+
+
+
+
 
 
 
