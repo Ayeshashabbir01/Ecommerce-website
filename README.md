@@ -1053,6 +1053,166 @@ Now we can add some styling in the styling.css.
     cursor: pointer;
 }
 ```
+# `Footer Design:`
+
+In the footer part of the website is the `bottom part` that shows `contact info`, `links to important pages`, `social media icons`, a newsletter `signup`, `payment options`, and `legal links`. It helps users find information and keeps the site organized.
+
+Firstly we sets up a `footer` with two sections. The `left side features menus` for `About Us`, `Useful Links`, and `Products`. The right side has a `newsletter signup`, `social media icons`, and a copyright notice for 2024. It offers key information and user engagement options.
+
+```py
+<footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+           
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">Air Force</li>
+                    <li class="fListItem">Air Jorden</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">Crater</li>
+                    <li class="fListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter! </h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img src="./img/facebook.png" alt="" class="fIcon">
+                    <img src="./img/twitter.png" alt="" class="fIcon">
+                    <img src="./img/instagram.png" alt="" class="fIcon">
+                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@aisha Dev. All rights reserved. 2024.</span>
+
+            </div>
+        </div>
+    </footer>
+```
+Now we can add styling in the style.css file.
+
+1.  Uses flexbox for layout.
+```py
+footer{
+    display:flex;
+}
+```
+2. Takes up 2 parts of space, uses flexbox, adds padding, and spaces items evenly.
+
+```py
+.footerLeft{
+    flex: 2;
+    display:flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+```
+3. Sets font size to 16px for menu titles.
+
+```py
+.fMenuTitle{
+    font-size: 16px;
+}
+```
+4. Removes default padding and list style for the list.
+
+```py
+.fList{
+    padding: 0;
+    list-style: none;
+}
+```
+5. Adds bottom margin, sets text color, and changes cursor to pointer for list items.
+
+```py
+.fListItem{
+    margin-bottom: 10px;
+    color: rgb(117, 115, 115);
+    cursor: pointer;
+}
+```
+6. Takes up 1 part of space, uses flexbox for vertical layout, and adds padding.
+
+```py
+.footerRight{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+```
+7.  Adds padding to the input field.
+
+```py
+.fInput{
+    padding: 5px;
+}
+```
+8. Adds padding and styles the button with a black background and white text.
+
+```py
+.fButton{
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+```
+9. Uses flexbox to arrange social media icons in a row.
+
+```py
+.fIcons{
+    display: flex;
+}
+```
+10. Sets width and height of icons, with right margin for spacing.
+
+```py
+.fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+```
+11. Styles the copyright text with a lighter weight and specific color.
+
+```py
+.copyright{
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(71, 70, 70);
+}
+```
+
 
 
 
